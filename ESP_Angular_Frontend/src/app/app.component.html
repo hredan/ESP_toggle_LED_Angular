@@ -1,0 +1,15 @@
+<main class="main">
+  <div class="content">
+   <!-- <h1>SleepUino</h1> -->
+   <mat-card>
+   <mat-card-header>
+    <img class="header-image" src="assets/images/LogoPreDev.png" alt="WebInterfaceExample">
+   </mat-card-header>
+    <mat-card-content>
+    <mat-slide-toggle class="slider" [(ngModel)]="isChecked" (change)="toggle($event)">LED: {{ledStatus}}</mat-slide-toggle>
+  </mat-card-content>
+  
+</mat-card>
+  </div>
+</main>
+<router-outlet />

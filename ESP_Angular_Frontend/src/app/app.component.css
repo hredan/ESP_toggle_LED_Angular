@@ -1,0 +1,12 @@
+.ui-title {
+}
+
+.header-image {
+  max-width: 400px;
+}
+
+.slider{
+  transform: scale(2);
+  transform-origin: left top;
+  margin-bottom: 20px;
+}
