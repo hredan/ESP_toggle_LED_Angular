@@ -3,7 +3,7 @@ RUN npm install -g @angular/cli
 RUN apk add git
 RUN mkdir /home/workspace
 RUN cd /home/workspace
-RUN git clone 
+RUN git clone --recurse-submodules https://github.com/hredan/ESP_toggle_LED_Angular_Frontend.git
 
 RUN apk add chromium
 ENV CHROME_BIN=/usr/bin/chromium
@@ -15,5 +15,5 @@ ENV CHROME_BIN=/usr/bin/chromium
 
 # npm install -g npm@10.8.1
 
-# docker build -t angular_18 .
+# docker build -t angular_18_esp_toogle_led .
 # docker run -p 4200:4200 -p 9876:9876 -it -v %cd%:/home/workspace angular_18 sh
