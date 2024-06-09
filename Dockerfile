@@ -8,7 +8,7 @@ RUN npm install -g npm@latest
 
 #clone ESP_toggle_LED_Angular_Frontend with submodules
 RUN mkdir /home/workspace
-RUN git clone --recurse-submodules https://github.com/hredan/ESP_toggle_LED_Angular_Frontend.git /home/workspace/ESP_toggle_LED_Angular_Frontend
+RUN git clone --recurse-submodules https://github.com/hredan/ESP_toggle_LED_Angular.git /home/workspace/ESP_toggle_LED_Angular
 
 #install node packages
 RUN cd /home/workspace/ESP_toggle_LED_Angular_Frontend/ESP_Angular_Frontend && npm install
