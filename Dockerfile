@@ -1,6 +1,10 @@
 FROM node:22-alpine
 RUN npm install -g @angular/cli
+RUN apk add bash
 RUN apk add git
+
+# get last version of npm
+RUN npm install -g npm@latest
 
 #clone ESP_toggle_LED_Angular_Frontend with submodules
 RUN mkdir /home/workspace
@@ -13,7 +17,7 @@ RUN cd /home/workspace/ESP_toggle_LED_Angular_Frontend/ESP_Angular_Frontend && n
 RUN apk add chromium
 ENV CHROME_BIN=/usr/bin/chromium
 
-WORKDIR /home/workspace/ESP_toggle_LED_Angular_Frontend
+# WORKDIR /home/workspace/ESP_toggle_LED_Angular_Frontend
 # ng serve port
 # EXPOSE 4200
 
@@ -24,4 +28,4 @@ WORKDIR /home/workspace/ESP_toggle_LED_Angular_Frontend
 
 # docker build -t angular_18_esp_toogle_led .
 # docker run -p 4200:4200 -p 9876:9876 -it -v %cd%:/home/workspace angular_18_esp_toogle_led sh
-# docker run -p 4200:4200 -p 9876:9876 -it angular_18_esp_toogle_led sh
+# docker run -it -workdir /home/workspace/ESP_toggle_LED_Angular_Frontend angular_18_esp_toogle_led sh
