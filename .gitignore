@@ -1,13 +1,13 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+/ESP_Angular_Frontend/dist
+/ESP_Angular_Frontend/tmp
+/ESP_Angular_Frontend/out-tsc
+/ESP_Angular_Frontend/bazel-out
 
 # Node
-/node_modules
+/ESP_Angular_Frontend/node_modules
 npm-debug.log
 yarn-error.log
 
@@ -29,7 +29,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+/ESP_Angular_Frontend/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
