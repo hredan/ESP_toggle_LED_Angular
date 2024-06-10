@@ -14,5 +14,8 @@ rm -rf $OUTPUT_DIR
 cd ..
 cp -r $SCRIPT_DIR/ESP_Angular_Frontend/dist/my-app/browser $OUTPUT_DIR
 
+cd ./ESP_Backend
+./ESP_Build_Scripts/build_sketch.sh -s ESP_Toggle_LED_Backend
+
 
 
