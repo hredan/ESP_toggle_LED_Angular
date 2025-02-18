@@ -1,4 +1,4 @@
-FROM node:22-slim
+FROM node:20-slim
 
 # get last version of npm
 RUN npm install -g npm@latest
@@ -9,11 +9,11 @@ RUN apt -y install git
 RUN apt -y install curl
 
 #clone ESP_toggle_LED_Angular_Frontend with submodules
-RUN mkdir /home/workspace
-RUN git clone --recurse-submodules https://github.com/hredan/ESP_toggle_LED_Angular.git /home/workspace/ESP_toggle_LED_Angular
+#RUN mkdir /home/workspace
+#RUN git clone --recurse-submodules https://github.com/hredan/ESP_toggle_LED_Angular.git /home/workspace/ESP_toggle_LED_Angular
 
 #install node packages
-RUN cd /home/workspace/ESP_toggle_LED_Angular/ESP_Angular_Frontend && npm install
+#RUN cd /home/workspace/ESP_toggle_LED_Angular/ESP_Angular_Frontend && npm install
 
 #install chromium for ng test
 RUN apt -y install chromium
@@ -28,6 +28,7 @@ ENV CHROME_BIN=/usr/bin/chromium
 
 # npm install -g npm@10.8.1
 
-# docker build -t angular_18_esp_toogle_led .
-# docker run -p 4200:4200 -p 9876:9876 -it -v %cd%:/home/workspace angular_18_esp_toogle_led sh
-# docker run -it --workdir /home/workspace/ESP_toggle_LED_Angular angular_18_esp_toogle_led bash
+# docker build -t angular_esp_toogle_led .
+# docker run -p 4200:4200 -p 9876:9876 -it -v %cd%:/home/workspace angular_esp_toogle_led sh
+# docker run -it --workdir /home/workspace/ESP_toggle_LED_Angular angular_esp_toogle_led bash
+# docker run -p 4200:4200 -p 9876:9876 -it -v ./ESP_Angular_Frontend:/home/workspace/ESP_Angular_Frontend --workdir /home/workspace/ESP_Angular_Frontend angular_esp_toogle_led bash
