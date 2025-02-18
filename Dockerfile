@@ -29,6 +29,7 @@ ENV CHROME_BIN=/usr/bin/chromium
 # npm install -g npm@10.8.1
 
 # docker build -t angular_esp_toogle_led .
-# docker run -p 4200:4200 -p 9876:9876 -it -v %cd%:/home/workspace angular_esp_toogle_led sh
-# docker run -it --workdir /home/workspace/ESP_toggle_LED_Angular angular_esp_toogle_led bash
-# docker run -p 4200:4200 -p 9876:9876 -it -v ./ESP_Angular_Frontend:/home/workspace/ESP_Angular_Frontend --workdir /home/workspace/ESP_Angular_Frontend angular_esp_toogle_led bash
+# docker run --name angular_dev_env -p 4200:4200 -p 9876:9876 -it -v ./ESP_Angular_Frontend:/home/workspace/ESP_Angular_Frontend --workdir /home/workspace/ESP_Angular_Frontend angular_esp_toogle_led bash
+# docker exec -it angular_dev_env ng build
+# mkdir ./ESP_Backend/data
+# cp -r ./ESP_Angular_Frontend/dist/my-app/browser/* ./ESP_Backend/data
