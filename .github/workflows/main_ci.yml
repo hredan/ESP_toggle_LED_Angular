@@ -17,8 +17,10 @@ jobs:
           cd ./ESP_Angular_Frontend
           npm install
           ng build
-          mkdir -p ../ESP_Backend/data
-          cp -r ./dist/my-app/browser/* ../ESP_Backend/data
+      - uses: actions/upload-artifact@v4
+        with:
+          name: data
+          path: ./ESP_Angular_Frontend/dist/my-app/browser
 
   # build_eep_esp32:
   #   needs: [test]
