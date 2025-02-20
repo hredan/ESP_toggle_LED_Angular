@@ -24,6 +24,7 @@ jobs:
           - uses: actions/download-artifact@v4
             with:
               name: data
+              path: ./data
           - run: ls -la
           - uses: hredan/eep-build-action@main
             with:
