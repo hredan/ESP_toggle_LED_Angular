@@ -20,5 +20,5 @@ jobs:
           submodules: 'recursive'
       - uses: arduino/arduino-lint-action@main
         with:
-          path: ./ESP_Backend
+          path: ./ESP_toggle_LED_Backend
           library-manager: 'update'
