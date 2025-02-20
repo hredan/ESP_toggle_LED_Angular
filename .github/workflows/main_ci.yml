@@ -21,6 +21,12 @@ jobs:
         with:
           name: data
           path: ./ESP_Angular_Frontend/dist/my-app/browser
+  build_eep_esp32:
+    needs: [test]
+    uses: ./.github/workflows/build_eep.yml
+    with:
+      core: esp32
+      board: d1_mini32
 
   # build_eep_esp32:
   #   needs: [test]
