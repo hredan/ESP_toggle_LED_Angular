@@ -18,6 +18,8 @@ jobs:
             SKETCH_NAME: ESP_toggle_LED_Backend
         steps:
           - uses: actions/checkout@v4
+            with:
+              submodules: 'recursive'
           - uses: actions/download-artifact@v4
             with:
               name: data
