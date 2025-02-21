@@ -12,7 +12,7 @@
             "label": "data",
             "type": "shell",
             "problemMatcher": [],
-            "command": "./Scripts/create_data.sh"
+            "command": "docker exec -it angular_dev_env ./Scripts/create_data.sh"
         }
     ]
 }

@@ -7,6 +7,7 @@ RUN npm install -g @angular/cli
 RUN apt update
 RUN apt -y install git
 RUN apt -y install curl
+RUN apt -y install zip
 
 #clone ESP_toggle_LED_Angular_Frontend with submodules
 RUN mkdir /home/workspace

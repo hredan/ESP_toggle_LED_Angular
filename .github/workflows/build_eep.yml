@@ -18,14 +18,10 @@ jobs:
             SKETCH_NAME: ESP_toggle_LED_Backend
         steps:
           - uses: actions/checkout@v4
-            with:
-              repository: 'hredan/ESP_toggle_LED_Backend'
-              ref: 'update_build_scripts'
-              path: './ESP_toggle_LED_Backend'
           - uses: actions/download-artifact@v4
             with:
               name: data
-              path: ./data
+              path: ./ESP_toggle_LED_Backend/data
           - run: pwd
           - run: ls -la
           - uses: hredan/eep-build-action@main
@@ -33,5 +29,5 @@ jobs:
               sketch-name: ${{env.SKETCH_NAME}}
               core: ${{ inputs.core }}
               board: ${{ inputs.board}}
-              libs: "Dictionary"
+              sketch-path: './ESP_toggle_LED_Backend'
           - run: ls -la
