@@ -1,0 +1,18 @@
+// https://code.visualstudio.com/docs/editor/tasks
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "eep",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "./Scripts/create_eep.sh"
+        },
+        {
+            "label": "data",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "./Scripts/create_data.sh"
+        }
+    ]
+}
