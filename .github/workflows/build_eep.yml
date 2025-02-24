@@ -29,6 +29,7 @@ jobs:
           - uses: hredan/eep-build-action@main
             with:
               sketch-name: ${{env.SKETCH_NAME}}
+              eep-name: 'ESP_toggle_LED_Angular'
               core: ${{ inputs.core }}
               board: ${{ inputs.board}}
               sketch-path: './ESP_toggle_LED_Backend'
